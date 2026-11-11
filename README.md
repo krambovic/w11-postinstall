@@ -4,13 +4,13 @@
 
 [Русская документация](README.ru.md) · [Usage](docs/usage.md) · [Compatibility](docs/compatibility.md) · [Recovery](docs/recovery.md) · [Roadmap](docs/roadmap.md)
 
-## Status: 0.1.0-preview
+## Status: 0.2.0-preview
 
 This is an initial implementation, **not a Windows-version-certified optimizer**. Only offline, mocked tests have been run. No installers, Windows settings or security services were changed on the development machine. All compatibility entries are `Unverified`; live Apply requires explicit acknowledgement.
 
 - Windows PowerShell 5.1; no extra runtime or module installation.
-- Russian / English numbered menu, profiles, app search and selection.
-- **Chocolatey (recommended)** is the first/default choice; WinGet is selectable. This label is the project preference, not a claim that Chocolatey is inherently safer or faster.
+- Color wizard in Russian and English: profile and app choices, one final confirmation, automatic execution. Advanced menu remains available via `-Mode Menu`.
+- **Chocolatey (recommended)** is the default when present. The wizard uses WinGet when it is the only available provider and asks which to use when both are present.
 - 104 app choices across browsers, editors, communication, gaming, office, creative and AI tools, including 19 ArtCraft entries. Package mappings are **candidates**, not validated installation results.
 - 15 current-user registry tweaks and 13 exact current-user Appx removal actions.
 - Read-only planning, plan integrity checks, state-drift detection, intent journals, registry recovery with conflict detection.
@@ -18,15 +18,15 @@ This is an initial implementation, **not a Windows-version-certified optimizer**
 
 ## Start
 
-From a downloaded and reviewed copy of the repository:
+Download [W11PostInstall.ps1](https://github.com/krambovic/w11-postinstall/releases/download/v0.2.0-preview/W11PostInstall.ps1). It includes the engine, catalogs, profiles and translations. No adjacent files are required.
 
 ```powershell
-.\Start.ps1
-.\Start.ps1 -Language en-US
-.\Start.ps1 -Mode Catalog
+.\W11PostInstall.ps1 -Language en-US -WhatIf  # noninteractive preview
+.\W11PostInstall.ps1 -Language en-US          # guided setup
+.\W11PostInstall.ps1 -Mode Menu -Language en-US
 ```
 
-`Start.cmd` uses Windows PowerShell without changing ExecutionPolicy or requesting elevation. If policy blocks execution, consult your administrator or local policy; the launcher does not bypass it.
+The wizard defaults to Balanced and Firefox, 7-Zip, VLC and Notepad++. After confirmation it applies the plan and requests UAC only if app installation requires elevation. No package-manager bootstrap or ExecutionPolicy bypass is included. In a source checkout, `Start.ps1` provides the same commands.
 
 Planning is read-only unless you explicitly request an output file:
 

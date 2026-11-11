@@ -13,7 +13,13 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Windows PowerShell 5.1 - parse and simulate only
         shell: powershell
-        run: ./tests/Test-Offline.ps1
+        run: |
+          ./tests/Test-Offline.ps1
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ./tests/Test-Standalone.ps1
       - name: PowerShell 7 - parse and simulate only
         shell: pwsh
-        run: ./tests/Test-Offline.ps1
+        run: |
+          ./tests/Test-Offline.ps1
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          ./tests/Test-Standalone.ps1

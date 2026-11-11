@@ -7,9 +7,19 @@ function Read-WpiJson {
     Get-Content -LiteralPath $Path -Raw -Encoding UTF8 -ErrorAction Stop | ConvertFrom-Json -ErrorAction Stop
 }
 
+function Read-WpiAsset {
+    param([Parameter(Mandatory)][string]$Name)
+    $embedded = Get-Variable -Name WpiAssets -Scope Script -ErrorAction SilentlyContinue
+    if ($embedded) {
+        if (-not $embedded.Value.ContainsKey($Name)) { throw "Missing bundled asset: $Name" }
+        return ($embedded.Value[$Name] | ConvertFrom-Json -ErrorAction Stop)
+    }
+    Read-WpiJson (Join-Path $script:Root $Name)
+}
+
 function Get-WpiCatalog {
-    $apps = Read-WpiJson (Join-Path $script:Root 'catalog/apps.json')
-    $actions = Read-WpiJson (Join-Path $script:Root 'catalog/actions.json')
+    $apps = Read-WpiAsset 'catalog/apps.json'
+    $actions = Read-WpiAsset 'catalog/actions.json'
     [pscustomobject]@{ Apps = @($apps.Apps); Actions = @($actions.Actions) }
 }
 
@@ -22,6 +32,8 @@ function Get-WpiHash {
 }
 
 function Get-WpiFingerprint {
+    $embedded = Get-Variable -Name WpiBundledFingerprint -Scope Script -ErrorAction SilentlyContinue
+    if ($embedded) { return $embedded.Value }
     $parts = foreach ($name in @('catalog/actions.json', 'catalog/apps.json', 'catalog/compatibility.json', 'src/Wpi.psm1')) {
         (Get-FileHash -LiteralPath (Join-Path $script:Root $name) -Algorithm SHA256).Hash
     }
@@ -38,7 +50,7 @@ function Get-WpiSystem {
         $edition = [string]$key.GetValue('EditionID')
         $ubr = [int]$key.GetValue('UBR', 0)
     } finally { if ($key) { $key.Dispose() } }
-    $compat = Read-WpiJson (Join-Path $script:Root 'catalog/compatibility.json')
+    $compat = Read-WpiAsset 'catalog/compatibility.json'
     $known = @($compat.Builds | Where-Object { $_.Build -eq $build })
     $arch = [Environment]::GetEnvironmentVariable('PROCESSOR_ARCHITEW6432')
     if (-not $arch) { $arch = [Environment]::GetEnvironmentVariable('PROCESSOR_ARCHITECTURE') }
@@ -178,7 +190,7 @@ function New-WpiPlan {
         [string[]]$Actions = @(), [string[]]$Apps = @()
     )
     $catalog = Get-WpiCatalog
-    if ($ProfileFile) { $config = Read-WpiJson $ProfileFile } else { $config = Read-WpiJson (Join-Path $script:Root "profiles/$Profile.json") }
+    if ($ProfileFile) { $config = Read-WpiJson $ProfileFile } else { $config = Read-WpiAsset "profiles/$Profile.json" }
     if ($config.SchemaVersion -ne 1) { throw 'Unsupported profile schema.' }
     foreach ($prop in $config.PSObject.Properties.Name) {
         if ($prop -notin @('SchemaVersion', 'Name', 'Provider', 'Actions', 'Apps')) { throw "Unknown profile field: $prop" }
@@ -371,7 +383,7 @@ function Invoke-WpiItem {
 function Invoke-WpiPlan {
     [CmdletBinding(SupportsShouldProcess)]
     param([Parameter(Mandatory)]$Plan, [Parameter(Mandatory)][string]$DataRoot,
-        [switch]$AcceptAgreements, [switch]$AcceptRisk, [switch]$AllowUnverified)
+        [switch]$AcceptAgreements, [switch]$AcceptRisk, [switch]$AllowUnverified, [switch]$ShowProgress)
     $system = Assert-WpiPlan $Plan
     # Dry run returns before package-manager calls, locks, directories or journal creation.
     if ($WhatIfPreference) {
@@ -416,6 +428,7 @@ function Invoke-WpiPlan {
             $record = [pscustomobject][ordered]@{ Id = $entry.Id; Kind = $entry.Kind; Before = $entry.Before; Status = $entry.Status; IntentWritten = $false; Error = $entry.Reason; NativeExitCode = $null }
             $journal.Entries = @($journal.Entries) + @($record)
             if ($entry.Status -ne 'Planned') { Write-WpiJson $path $journal; continue }
+            if ($ShowProgress) { Write-Host ('  [{0}/{1}]  {2}' -f $journal.Entries.Count, $Plan.Payload.Entries.Count, $entry.Id) -ForegroundColor Cyan }
             try {
                 # Re-check after acquiring the lock, immediately before writing intent.
                 $fresh = Get-WpiItemState $item @(Get-WpiInstalledApps)
@@ -509,4 +522,4 @@ function Get-WpiDefender {
     }
 }
 
-Export-ModuleMember -Function Get-WpiCatalog, Get-WpiSystem, New-WpiPlan, Read-WpiJson, Write-WpiJson, Invoke-WpiPlan, Restore-WpiRun, Get-WpiRun, Get-WpiDefender
+Export-ModuleMember -Function Get-WpiCatalog, Get-WpiSystem, New-WpiPlan, Read-WpiJson, Read-WpiAsset, Write-WpiJson, Invoke-WpiPlan, Restore-WpiRun, Get-WpiRun, Get-WpiDefender

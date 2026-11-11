@@ -1,0 +1,32 @@
+{
+  "Profile": "How should Windows be configured?",
+  "Balanced": "Essential tweaks + removal of Get Started and Feedback Hub",
+  "Minimal": "Fewer preinstalled apps",
+  "Gaming": "Game capture settings",
+  "Privacy": "Less personalization and fewer tips",
+  "Laptop": "A small set of laptop tweaks",
+  "Apps": "Which apps should be installed?",
+  "Packs": [
+    "1  Essentials: Firefox, 7-Zip, VLC, Notepad++",
+    "2  Essentials + Telegram and Discord",
+    "3  Skip apps",
+    "4  Custom selection (includes ArtCraft)"
+  ],
+  "Choose": "Choice",
+  "AppIds": "Comma-separated IDs (Enter to skip)",
+  "Unknown": "Not in catalog",
+  "Manager": "Package manager",
+  "Plan": "Setup plan",
+  "Nothing": "Nothing to run automatically.",
+  "DryRun": "Preview: nothing was applied or downloaded.",
+  "Unsupported": "Preview Apply is unavailable for this build, edition or architecture.",
+  "PreviewNotice": "Preview: these changes have not been verified on every Windows build.",
+  "Agreements": "Confirming also accepts the listed packages' and sources' agreements.",
+  "Risk": "Removing the listed Appx packages may delete their data.",
+  "Confirm": "Apply the entire plan (y/n)",
+  "Cancelled": "Cancelled. Windows was not changed.",
+  "Elevate": "App installation needs UAC approval under the same account.",
+  "Result": "RESULT",
+  "Journal": "Journal",
+  "ExitCode": "Exit code"
+}

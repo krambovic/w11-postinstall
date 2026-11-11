@@ -188,6 +188,44 @@ $results = & $module {
     $script:FakeSystem.Providers.Choco = $false
     $missing = New-WpiPlan -Profile Custom -Apps @('firefox')
     Check ($missing.Payload.Entries[0].Status -eq 'Blocked') 'Missing provider is blocked without bootstrap'
+    . (Join-Path $script:Root 'src/Wizard.ps1')
+    $script:WizardCalls = 0; $script:WizardPrompts = 0; $script:WizardElevations = 0
+    $script:WizardAnswers = [Collections.Generic.Queue[string]]::new()
+    function Read-Host {
+        param([string]$Prompt)
+        $script:WizardPrompts++
+        if (-not $script:WizardAnswers.Count) { throw "Unexpected wizard prompt: $Prompt" }
+        $script:WizardAnswers.Dequeue()
+    }
+    function Invoke-WpiPlan {
+        param($Plan, $DataRoot, [switch]$AllowUnverified, [switch]$AcceptAgreements, [switch]$AcceptRisk, [switch]$ShowProgress, [switch]$Confirm)
+        $script:WizardCalls++
+        $script:WizardPlan = $Plan
+        $script:WizardConsent = $AllowUnverified -and $AcceptAgreements -and $AcceptRisk
+        [pscustomobject]@{ Status = 'Completed'; ExitCode = 0; RunId = $null }
+    }
+    function Invoke-WpiElevatedPlan {
+        param($Plan, $DataRoot, $EntryScript, $Language, [switch]$AcceptRisk)
+        $script:WizardElevations++
+        0
+    }
+    $wizardArgs = @{ Profile = 'Balanced'; Apps = @(); Actions = @(); Language = 'en-US'; DataRoot = 'D:\FAKE'; EntryScript = 'D:\FAKE.ps1' }
+    $preview = Invoke-WpiWizard @wizardArgs -Preview
+    Check ($preview -eq 0 -and $script:WizardCalls -eq 0 -and $script:WizardPrompts -eq 0 -and $script:WizardElevations -eq 0) 'Wizard preview prompts for nothing and makes no changes'
+    $script:Appx['Microsoft.Getstarted'] = [pscustomobject]@{ Name = 'Microsoft.Getstarted'; PackageFullName = 'FAKE-PACKAGE' }
+    foreach ($answer in @('', '', 'y')) { $script:WizardAnswers.Enqueue($answer) }
+    $run = Invoke-WpiWizard @wizardArgs
+    Check ($run -eq 0 -and $script:WizardCalls -eq 1 -and $script:WizardPrompts -eq 3) 'Wizard selects defaults then applies once after one combined consent'
+    Check ($script:WizardPlan.Payload.Provider -eq 'Winget' -and $script:WizardConsent) 'Wizard falls back to installed WinGet and passes app and Appx consent'
+    Check (@($script:WizardPlan.Payload.Entries | Where-Object { $_.Kind -eq 'App' }).Count -eq 4) 'Wizard defaults to the four essential apps'
+    foreach ($answer in @('', '')) { $script:WizardAnswers.Enqueue($answer) }
+    $cancel = Invoke-WpiWizard @wizardArgs -ProfileFixed
+    Check ($cancel -eq 3 -and $script:WizardCalls -eq 1) 'Declining confirmation leaves Windows untouched'
+    Throws { Invoke-WpiWizard @wizardArgs -NonInteractive } 'Unattended wizard requires explicit consent flags'
+    $script:FakeSystem.IsAdmin = $false
+    foreach ($answer in @('', 'y')) { $script:WizardAnswers.Enqueue($answer) }
+    $elevated = Invoke-WpiWizard @wizardArgs -ProfileFixed
+    Check ($elevated -eq 0 -and $script:WizardElevations -eq 1 -and $script:WizardCalls -eq 1) 'Approved app setup requests elevation once'
     $script:Assertions
 }
 foreach ($result in $results) { Assert-Test $result.Passed $result.Message }

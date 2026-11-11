@@ -5,12 +5,12 @@
 
 function Show-WpiMenu {
     param([string]$Language, [string]$DataRoot)
-    $script:Text = Read-WpiJson (Join-Path $PSScriptRoot "../locales/$Language.json")
+    $script:Text = Read-WpiAsset "locales/$Language.json"
     $profile = 'Balanced'; $provider = 'Choco'
     $selectedApps = @(); $selectedActions = @()
     $catalog = Get-WpiCatalog
     while ($true) {
-        Write-Host "`nW11 PostInstall 0.1.0-preview" -ForegroundColor Cyan
+        Write-Host "`nW11 PostInstall 0.2.0-preview" -ForegroundColor Cyan
         Write-Host (Get-WpiText 'Preview')
         Write-Host ("{0}: {1} | {2}: {3}" -f (Get-WpiText 'Profile'), $profile, (Get-WpiText 'Provider'), $provider)
         Write-Host ("{0}: {1} | {2}: {3}" -f (Get-WpiText 'SelectedApps'), $selectedApps.Count, (Get-WpiText 'SelectedActions'), $selectedActions.Count)

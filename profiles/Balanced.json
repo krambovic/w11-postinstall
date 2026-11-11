@@ -7,7 +7,9 @@
     "privacy.advertising",
     "privacy.tailored",
     "privacy.suggestions",
-    "privacy.tips"
+    "privacy.tips",
+    "debloat.getstarted",
+    "debloat.feedback"
   ],
   "Apps": []
 }

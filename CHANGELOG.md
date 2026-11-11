@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0-preview
+
+- Single-file release with the engine, catalog, profiles and translations embedded.
+- Color setup wizard is now the default. Choose a profile and app pack, then confirm once and let the script run the plan.
+- Chocolatey is preferred when installed; WinGet is selected automatically when it is the only installed provider.
+- UAC handoff for approved app installs, noninteractive dry run and standalone smoke checks.
+
 ## 0.1.0-preview — 2026-11-11
 
 - Initial PowerShell 5.1 CLI with RU/EN menu and six profiles.
