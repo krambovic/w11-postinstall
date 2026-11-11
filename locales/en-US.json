@@ -1,0 +1,21 @@
+{
+  "Preview": "PREVIEW: simulation tests only; Windows changes have not been validated in VMs.",
+  "Profile": "Profile",
+  "Provider": "Provider",
+  "SelectedApps": "Additional apps",
+  "SelectedActions": "Additional actions",
+  "MainMenu": "1. Diagnose\n2. Profile\n3. Tweaks / Debloat / Defender Remover\n4. Select apps (search, categories, ArtCraft)\n5. Chocolatey / WinGet\n6. Preview and save plan\n7. Apply\n8. History and restore\n9. Defender status\n0. Exit",
+  "Choose": "Number",
+  "ActionIds": "Extra action IDs, comma separated (Enter clears). Profile actions remain; Custom selects only your actions",
+  "Search": "Search name, category or modern / artcraft / heavy tag (Enter lists all)",
+  "AppIds": "App IDs, comma separated: toggle selection (Enter goes back)",
+  "Manual": "Manual installation",
+  "SavePlan": "JSON plan output path (Enter skips writing)",
+  "ApplyNotice": "This makes real changes. PREVIEW compatibility is not VM-tested. Package mappings are candidates: review exact packages and free disk space. No package manager bootstrap. Defender Remove is blocked. The script never initiates a reboot, but third-party installers may behave differently.",
+  "ConfirmApply": "Type APPLY to apply this unverified preview",
+  "Agreements": "Accept licenses for selected apps and sources? Type YES",
+  "DataLoss": "Appx removal may delete app data; no automatic restore. Accept risk? Type YES",
+  "RestoreId": "RunId from JSON filename, without extension (Enter goes back)",
+  "ConfirmRestore": "Restore original registry values? Apps require manual recovery. Type RESTORE",
+  "Invalid": "Invalid menu item"
+}

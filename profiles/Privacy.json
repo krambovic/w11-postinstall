@@ -1,0 +1,13 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Privacy",
+  "Provider": "Choco",
+  "Actions": [
+    "privacy.advertising",
+    "privacy.tailored",
+    "privacy.suggestions",
+    "privacy.tips",
+    "explorer.sync-notifications"
+  ],
+  "Apps": []
+}

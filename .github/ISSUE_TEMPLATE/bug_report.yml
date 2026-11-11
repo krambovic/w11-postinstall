@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible problem without private logs
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Project version / commit
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows release, build, edition and architecture
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and expected / actual behavior
+      description: Remove SID, personal paths, usernames and machine identifiers.
+    validations:
+      required: true

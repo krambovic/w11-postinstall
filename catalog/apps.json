@@ -1,0 +1,1349 @@
+{
+  "SchemaVersion": 1,
+  "SourceDate": "2026-11-11",
+  "Apps": [
+    {
+      "Id": "firefox",
+      "Name": "Firefox",
+      "Category": "Browsers",
+      "Winget": "Mozilla.Firefox",
+      "Choco": "firefox",
+      "Website": "https://www.mozilla.org/firefox/",
+      "DetectPattern": "^Mozilla Firefox",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "brave",
+      "Name": "Brave",
+      "Category": "Browsers",
+      "Winget": "Brave.Brave",
+      "Choco": "brave",
+      "Website": "https://brave.com/",
+      "DetectPattern": "^Brave",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "chrome",
+      "Name": "Google Chrome",
+      "Category": "Browsers",
+      "Winget": "Google.Chrome",
+      "Choco": "googlechrome",
+      "Website": "https://www.google.com/chrome/",
+      "DetectPattern": "^Google Chrome",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "zen",
+      "Name": "Zen Browser",
+      "Category": "Browsers",
+      "Winget": "Zen-Team.Zen-Browser",
+      "Choco": "",
+      "Website": "https://zen-browser.app/",
+      "DetectPattern": "^Zen( Browser)?",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "vivaldi",
+      "Name": "Vivaldi",
+      "Category": "Browsers",
+      "Winget": "Vivaldi.Vivaldi",
+      "Choco": "vivaldi",
+      "Website": "https://vivaldi.com/",
+      "DetectPattern": "^Vivaldi",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "librewolf",
+      "Name": "LibreWolf",
+      "Category": "Browsers",
+      "Winget": "LibreWolf.LibreWolf",
+      "Choco": "librewolf",
+      "Website": "https://librewolf.net/",
+      "DetectPattern": "^LibreWolf",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "notepadpp",
+      "Name": "Notepad++",
+      "Category": "Editors",
+      "Winget": "Notepad++.Notepad++",
+      "Choco": "notepadplusplus",
+      "Website": "https://notepad-plus-plus.org/",
+      "DetectPattern": "^Notepad\\+\\+",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "vscode",
+      "Name": "Visual Studio Code",
+      "Category": "Development",
+      "Winget": "Microsoft.VisualStudioCode",
+      "Choco": "vscode",
+      "Website": "https://code.visualstudio.com/",
+      "DetectPattern": "^Microsoft Visual Studio Code",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "vscodium",
+      "Name": "VSCodium",
+      "Category": "Development",
+      "Winget": "VSCodium.VSCodium",
+      "Choco": "vscodium",
+      "Website": "https://vscodium.com/",
+      "DetectPattern": "^VSCodium",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "cursor",
+      "Name": "Cursor",
+      "Category": "AI",
+      "Winget": "Anysphere.Cursor",
+      "Choco": "",
+      "Website": "https://cursor.com/",
+      "DetectPattern": "^Cursor",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "zed",
+      "Name": "Zed",
+      "Category": "Development",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://zed.dev/",
+      "DetectPattern": "^Zed",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "git",
+      "Name": "Git",
+      "Category": "Development",
+      "Winget": "Git.Git",
+      "Choco": "git",
+      "Website": "https://git-scm.com/",
+      "DetectPattern": "^Git version",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "github-desktop",
+      "Name": "GitHub Desktop",
+      "Category": "Development",
+      "Winget": "GitHub.GitHubDesktop",
+      "Choco": "github-desktop",
+      "Website": "https://desktop.github.com/",
+      "DetectPattern": "^GitHub Desktop",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "terminal",
+      "Name": "Windows Terminal",
+      "Category": "Development",
+      "Winget": "Microsoft.WindowsTerminal",
+      "Choco": "",
+      "Website": "https://github.com/microsoft/terminal",
+      "DetectPattern": "^Windows Terminal",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "python",
+      "Name": "Python 3.13",
+      "Category": "Development",
+      "Winget": "Python.Python.3.13",
+      "Choco": "python313",
+      "Website": "https://www.python.org/",
+      "DetectPattern": "^Python 3\\.13",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "node",
+      "Name": "Node.js LTS",
+      "Category": "Development",
+      "Winget": "OpenJS.NodeJS.LTS",
+      "Choco": "nodejs-lts",
+      "Website": "https://nodejs.org/",
+      "DetectPattern": "^Node\\.js",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "uv",
+      "Name": "uv",
+      "Category": "Development",
+      "Winget": "astral-sh.uv",
+      "Choco": "",
+      "Website": "https://docs.astral.sh/uv/",
+      "DetectPattern": "^uv$",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "docker",
+      "Name": "Docker Desktop",
+      "Category": "Development",
+      "Winget": "Docker.DockerDesktop",
+      "Choco": "docker-desktop",
+      "Website": "https://www.docker.com/products/docker-desktop/",
+      "DetectPattern": "^Docker Desktop",
+      "Tags": [
+        "heavy"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "vlc",
+      "Name": "VLC",
+      "Category": "Media",
+      "Winget": "VideoLAN.VLC",
+      "Choco": "vlc",
+      "Website": "https://www.videolan.org/vlc/",
+      "DetectPattern": "^VLC media player",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "mpv",
+      "Name": "mpv",
+      "Category": "Media",
+      "Winget": "",
+      "Choco": "mpv",
+      "Website": "https://mpv.io/",
+      "DetectPattern": "^mpv",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "mpchc",
+      "Name": "MPC-HC",
+      "Category": "Media",
+      "Winget": "clsid2.mpc-hc",
+      "Choco": "mpc-hc-clsid2",
+      "Website": "https://github.com/clsid2/mpc-hc",
+      "DetectPattern": "^MPC-HC",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "foobar2000",
+      "Name": "foobar2000",
+      "Category": "Media",
+      "Winget": "PeterPawlowski.foobar2000",
+      "Choco": "foobar2000",
+      "Website": "https://www.foobar2000.org/",
+      "DetectPattern": "^foobar2000",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "musicbee",
+      "Name": "MusicBee",
+      "Category": "Media",
+      "Winget": "MusicBee.MusicBee",
+      "Choco": "musicbee",
+      "Website": "https://getmusicbee.com/",
+      "DetectPattern": "^MusicBee",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "spotify",
+      "Name": "Spotify",
+      "Category": "Media",
+      "Winget": "Spotify.Spotify",
+      "Choco": "spotify",
+      "Website": "https://www.spotify.com/",
+      "DetectPattern": "^Spotify",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "obs",
+      "Name": "OBS Studio",
+      "Category": "Creative",
+      "Winget": "OBSProject.OBSStudio",
+      "Choco": "obs-studio",
+      "Website": "https://obsproject.com/",
+      "DetectPattern": "^OBS Studio",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "audacity",
+      "Name": "Audacity",
+      "Category": "Creative",
+      "Winget": "Audacity.Audacity",
+      "Choco": "audacity",
+      "Website": "https://www.audacityteam.org/",
+      "DetectPattern": "^Audacity",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "blender",
+      "Name": "Blender",
+      "Category": "Creative",
+      "Winget": "BlenderFoundation.Blender",
+      "Choco": "blender",
+      "Website": "https://www.blender.org/",
+      "DetectPattern": "^Blender",
+      "Tags": [
+        "heavy"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "krita",
+      "Name": "Krita",
+      "Category": "Creative",
+      "Winget": "KDE.Krita",
+      "Choco": "krita",
+      "Website": "https://krita.org/",
+      "DetectPattern": "^Krita",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "gimp",
+      "Name": "GIMP",
+      "Category": "Creative",
+      "Winget": "GIMP.GIMP.3",
+      "Choco": "gimp",
+      "Website": "https://www.gimp.org/",
+      "DetectPattern": "^GIMP",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "inkscape",
+      "Name": "Inkscape",
+      "Category": "Creative",
+      "Winget": "Inkscape.Inkscape",
+      "Choco": "inkscape",
+      "Website": "https://inkscape.org/",
+      "DetectPattern": "^Inkscape",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "kdenlive",
+      "Name": "Kdenlive",
+      "Category": "Creative",
+      "Winget": "KDE.Kdenlive",
+      "Choco": "kdenlive",
+      "Website": "https://kdenlive.org/",
+      "DetectPattern": "^Kdenlive",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "shotcut",
+      "Name": "Shotcut",
+      "Category": "Creative",
+      "Winget": "Meltytech.Shotcut",
+      "Choco": "shotcut",
+      "Website": "https://shotcut.org/",
+      "DetectPattern": "^Shotcut",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "davinci",
+      "Name": "DaVinci Resolve",
+      "Category": "Creative",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://www.blackmagicdesign.com/products/davinciresolve",
+      "DetectPattern": "^DaVinci Resolve",
+      "Tags": [
+        "heavy"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "handbrake",
+      "Name": "HandBrake",
+      "Category": "Creative",
+      "Winget": "HandBrake.HandBrake",
+      "Choco": "handbrake",
+      "Website": "https://handbrake.fr/",
+      "DetectPattern": "^HandBrake",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "sharex",
+      "Name": "ShareX",
+      "Category": "Utilities",
+      "Winget": "ShareX.ShareX",
+      "Choco": "sharex",
+      "Website": "https://getsharex.com/",
+      "DetectPattern": "^ShareX",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "7zip",
+      "Name": "7-Zip",
+      "Category": "Utilities",
+      "Winget": "7zip.7zip",
+      "Choco": "7zip",
+      "Website": "https://www.7-zip.org/",
+      "DetectPattern": "^7-Zip",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "nanazip",
+      "Name": "NanaZip",
+      "Category": "Utilities",
+      "Winget": "M2Team.NanaZip",
+      "Choco": "",
+      "Website": "https://github.com/M2Team/NanaZip",
+      "DetectPattern": "^NanaZip",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "everything",
+      "Name": "Everything",
+      "Category": "Utilities",
+      "Winget": "voidtools.Everything",
+      "Choco": "everything",
+      "Website": "https://www.voidtools.com/",
+      "DetectPattern": "^Everything",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "powertoys",
+      "Name": "PowerToys",
+      "Category": "Utilities",
+      "Winget": "Microsoft.PowerToys",
+      "Choco": "powertoys",
+      "Website": "https://github.com/microsoft/PowerToys",
+      "DetectPattern": "^PowerToys",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "flow-launcher",
+      "Name": "Flow Launcher",
+      "Category": "Utilities",
+      "Winget": "Flow-Launcher.Flow-Launcher",
+      "Choco": "flow-launcher",
+      "Website": "https://www.flowlauncher.com/",
+      "DetectPattern": "^Flow Launcher",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "localsend",
+      "Name": "LocalSend",
+      "Category": "Utilities",
+      "Winget": "LocalSend.LocalSend",
+      "Choco": "localsend",
+      "Website": "https://localsend.org/",
+      "DetectPattern": "^LocalSend",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "quicklook",
+      "Name": "QuickLook",
+      "Category": "Utilities",
+      "Winget": "QL-Win.QuickLook",
+      "Choco": "quicklook",
+      "Website": "https://github.com/QL-Win/QuickLook",
+      "DetectPattern": "^QuickLook",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "wiztree",
+      "Name": "WizTree",
+      "Category": "Utilities",
+      "Winget": "AntibodySoftware.WizTree",
+      "Choco": "wiztree",
+      "Website": "https://diskanalyzer.com/",
+      "DetectPattern": "^WizTree",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "windirstat",
+      "Name": "WinDirStat",
+      "Category": "Utilities",
+      "Winget": "WinDirStat.WinDirStat",
+      "Choco": "windirstat",
+      "Website": "https://windirstat.net/",
+      "DetectPattern": "^WinDirStat",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "bulk-crap",
+      "Name": "Bulk Crap Uninstaller",
+      "Category": "Utilities",
+      "Winget": "Klocman.BulkCrapUninstaller",
+      "Choco": "bulk-crap-uninstaller",
+      "Website": "https://www.bcuninstaller.com/",
+      "DetectPattern": "^Bulk Crap Uninstaller",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "rclone",
+      "Name": "rclone",
+      "Category": "Utilities",
+      "Winget": "Rclone.Rclone",
+      "Choco": "rclone",
+      "Website": "https://rclone.org/",
+      "DetectPattern": "^rclone",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "syncthing",
+      "Name": "Syncthing",
+      "Category": "Utilities",
+      "Winget": "Syncthing.Syncthing",
+      "Choco": "syncthing",
+      "Website": "https://syncthing.net/",
+      "DetectPattern": "^Syncthing",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "rustdesk",
+      "Name": "RustDesk",
+      "Category": "Utilities",
+      "Winget": "RustDesk.RustDesk",
+      "Choco": "rustdesk",
+      "Website": "https://rustdesk.com/",
+      "DetectPattern": "^RustDesk",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "deskflow",
+      "Name": "Deskflow",
+      "Category": "Utilities",
+      "Winget": "Deskflow.Deskflow",
+      "Choco": "",
+      "Website": "https://deskflow.github.io/deskflow/",
+      "DetectPattern": "^Deskflow",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "eartrumpet",
+      "Name": "EarTrumpet",
+      "Category": "Utilities",
+      "Winget": "File-New-Project.EarTrumpet",
+      "Choco": "",
+      "Website": "https://eartrumpet.app/",
+      "DetectPattern": "^EarTrumpet",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "twinkle-tray",
+      "Name": "Twinkle Tray",
+      "Category": "Utilities",
+      "Winget": "xanderfrangos.twinkletray",
+      "Choco": "",
+      "Website": "https://twinkletray.com/",
+      "DetectPattern": "^Twinkle Tray",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "telegram",
+      "Name": "Telegram Desktop",
+      "Category": "Communication",
+      "Winget": "Telegram.TelegramDesktop",
+      "Choco": "telegram",
+      "Website": "https://desktop.telegram.org/",
+      "DetectPattern": "^Telegram Desktop",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "discord",
+      "Name": "Discord",
+      "Category": "Communication",
+      "Winget": "Discord.Discord",
+      "Choco": "discord",
+      "Website": "https://discord.com/",
+      "DetectPattern": "^Discord",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "signal",
+      "Name": "Signal",
+      "Category": "Communication",
+      "Winget": "OpenWhisperSystems.Signal",
+      "Choco": "signal",
+      "Website": "https://signal.org/",
+      "DetectPattern": "^Signal",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "whatsapp",
+      "Name": "WhatsApp",
+      "Category": "Communication",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://www.whatsapp.com/download",
+      "DetectPattern": "^WhatsApp",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "element",
+      "Name": "Element",
+      "Category": "Communication",
+      "Winget": "Element.Element",
+      "Choco": "element-desktop",
+      "Website": "https://element.io/",
+      "DetectPattern": "^Element",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "slack",
+      "Name": "Slack",
+      "Category": "Communication",
+      "Winget": "SlackTechnologies.Slack",
+      "Choco": "slack",
+      "Website": "https://slack.com/",
+      "DetectPattern": "^Slack",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "zoom",
+      "Name": "Zoom",
+      "Category": "Communication",
+      "Winget": "Zoom.Zoom",
+      "Choco": "zoom",
+      "Website": "https://www.zoom.com/",
+      "DetectPattern": "^Zoom",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "thunderbird",
+      "Name": "Thunderbird",
+      "Category": "Communication",
+      "Winget": "Mozilla.Thunderbird",
+      "Choco": "thunderbird",
+      "Website": "https://www.thunderbird.net/",
+      "DetectPattern": "^Mozilla Thunderbird",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "obsidian",
+      "Name": "Obsidian",
+      "Category": "Productivity",
+      "Winget": "Obsidian.Obsidian",
+      "Choco": "obsidian",
+      "Website": "https://obsidian.md/",
+      "DetectPattern": "^Obsidian",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "notion",
+      "Name": "Notion",
+      "Category": "Productivity",
+      "Winget": "Notion.Notion",
+      "Choco": "notion",
+      "Website": "https://www.notion.com/",
+      "DetectPattern": "^Notion",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "joplin",
+      "Name": "Joplin",
+      "Category": "Productivity",
+      "Winget": "Joplin.Joplin",
+      "Choco": "joplin",
+      "Website": "https://joplinapp.org/",
+      "DetectPattern": "^Joplin",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "anytype",
+      "Name": "Anytype",
+      "Category": "Productivity",
+      "Winget": "Anytype.Anytype",
+      "Choco": "",
+      "Website": "https://anytype.io/",
+      "DetectPattern": "^Anytype",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "logseq",
+      "Name": "Logseq",
+      "Category": "Productivity",
+      "Winget": "Logseq.Logseq",
+      "Choco": "logseq",
+      "Website": "https://logseq.com/",
+      "DetectPattern": "^Logseq",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "libreoffice",
+      "Name": "LibreOffice",
+      "Category": "Office",
+      "Winget": "TheDocumentFoundation.LibreOffice",
+      "Choco": "libreoffice-fresh",
+      "Website": "https://www.libreoffice.org/",
+      "DetectPattern": "^LibreOffice",
+      "Tags": [
+        "heavy"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "onlyoffice",
+      "Name": "ONLYOFFICE Desktop Editors",
+      "Category": "Office",
+      "Winget": "ONLYOFFICE.DesktopEditors",
+      "Choco": "onlyoffice",
+      "Website": "https://www.onlyoffice.com/desktop.aspx",
+      "DetectPattern": "^ONLYOFFICE",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "sumatra",
+      "Name": "SumatraPDF",
+      "Category": "Office",
+      "Winget": "SumatraPDF.SumatraPDF",
+      "Choco": "sumatrapdf",
+      "Website": "https://www.sumatrapdfreader.org/",
+      "DetectPattern": "^SumatraPDF",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "pdf24",
+      "Name": "PDF24 Creator",
+      "Category": "Office",
+      "Winget": "geeksoftwareGmbH.PDF24Creator",
+      "Choco": "pdf24",
+      "Website": "https://tools.pdf24.org/creator",
+      "DetectPattern": "^PDF24 Creator",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "bitwarden",
+      "Name": "Bitwarden",
+      "Category": "Security",
+      "Winget": "Bitwarden.Bitwarden",
+      "Choco": "bitwarden",
+      "Website": "https://bitwarden.com/",
+      "DetectPattern": "^Bitwarden",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "keepassxc",
+      "Name": "KeePassXC",
+      "Category": "Security",
+      "Winget": "KeePassXCTeam.KeePassXC",
+      "Choco": "keepassxc",
+      "Website": "https://keepassxc.org/",
+      "DetectPattern": "^KeePassXC",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "protonpass",
+      "Name": "Proton Pass",
+      "Category": "Security",
+      "Winget": "Proton.ProtonPass",
+      "Choco": "",
+      "Website": "https://proton.me/pass",
+      "DetectPattern": "^Proton Pass",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "veracrypt",
+      "Name": "VeraCrypt",
+      "Category": "Security",
+      "Winget": "IDRIX.VeraCrypt",
+      "Choco": "veracrypt",
+      "Website": "https://veracrypt.io/",
+      "DetectPattern": "^VeraCrypt",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "wireguard",
+      "Name": "WireGuard",
+      "Category": "Network",
+      "Winget": "WireGuard.WireGuard",
+      "Choco": "wireguard",
+      "Website": "https://www.wireguard.com/",
+      "DetectPattern": "^WireGuard",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "tailscale",
+      "Name": "Tailscale",
+      "Category": "Network",
+      "Winget": "Tailscale.Tailscale",
+      "Choco": "tailscale",
+      "Website": "https://tailscale.com/",
+      "DetectPattern": "^Tailscale",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "qbittorrent",
+      "Name": "qBittorrent",
+      "Category": "Network",
+      "Winget": "qBittorrent.qBittorrent",
+      "Choco": "qbittorrent",
+      "Website": "https://www.qbittorrent.org/",
+      "DetectPattern": "^qBittorrent",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "steam",
+      "Name": "Steam",
+      "Category": "Gaming",
+      "Winget": "Valve.Steam",
+      "Choco": "steam",
+      "Website": "https://store.steampowered.com/",
+      "DetectPattern": "^Steam$",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "epic",
+      "Name": "Epic Games Launcher",
+      "Category": "Gaming",
+      "Winget": "EpicGames.EpicGamesLauncher",
+      "Choco": "epicgameslauncher",
+      "Website": "https://store.epicgames.com/",
+      "DetectPattern": "^Epic Games Launcher",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "gog",
+      "Name": "GOG Galaxy",
+      "Category": "Gaming",
+      "Winget": "GOG.Galaxy",
+      "Choco": "goggalaxy",
+      "Website": "https://www.gog.com/galaxy",
+      "DetectPattern": "^GOG GALAXY",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "playnite",
+      "Name": "Playnite",
+      "Category": "Gaming",
+      "Winget": "Playnite.Playnite",
+      "Choco": "playnite",
+      "Website": "https://playnite.link/",
+      "DetectPattern": "^Playnite",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "heroic",
+      "Name": "Heroic Games Launcher",
+      "Category": "Gaming",
+      "Winget": "HeroicGamesLauncher.HeroicGamesLauncher",
+      "Choco": "heroic-games-launcher",
+      "Website": "https://heroicgameslauncher.com/",
+      "DetectPattern": "^Heroic",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "prism",
+      "Name": "Prism Launcher",
+      "Category": "Gaming",
+      "Winget": "PrismLauncher.PrismLauncher",
+      "Choco": "prismlauncher",
+      "Website": "https://prismlauncher.org/",
+      "DetectPattern": "^Prism Launcher",
+      "Tags": [],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "ollama",
+      "Name": "Ollama",
+      "Category": "AI",
+      "Winget": "Ollama.Ollama",
+      "Choco": "ollama",
+      "Website": "https://ollama.com/",
+      "DetectPattern": "^Ollama",
+      "Tags": [
+        "heavy"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "lmstudio",
+      "Name": "LM Studio",
+      "Category": "AI",
+      "Winget": "ElementLabs.LMStudio",
+      "Choco": "",
+      "Website": "https://lmstudio.ai/",
+      "DetectPattern": "^LM Studio",
+      "Tags": [
+        "heavy"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "jan",
+      "Name": "Jan",
+      "Category": "AI",
+      "Winget": "Jan.Jan",
+      "Choco": "",
+      "Website": "https://jan.ai/",
+      "DetectPattern": "^Jan$",
+      "Tags": [
+        "modern"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "comfyui",
+      "Name": "ComfyUI",
+      "Category": "AI",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://www.comfy.org/",
+      "DetectPattern": "^ComfyUI",
+      "Tags": [
+        "heavy"
+      ],
+      "Verification": "candidate",
+      "Notes": "Package availability, current release and installer behavior must be checked before use."
+    },
+    {
+      "Id": "artcraft",
+      "Name": "ArtCraft Studio",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/artcraft",
+      "DetectPattern": "^ArtCraft Studio",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "artcraft-launcher",
+      "Name": "ArtCraft Launcher",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://getartcraft.com/",
+      "DetectPattern": "^ArtCraft Launcher",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "photocraft",
+      "Name": "PhotoCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/photocraft",
+      "DetectPattern": "^PhotoCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "vectorcraft",
+      "Name": "VectorCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/vectorcraft",
+      "DetectPattern": "^VectorCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "filmcraft",
+      "Name": "FilmCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/filmcraft",
+      "DetectPattern": "^FilmCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "lightcraft",
+      "Name": "LightCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/lightcraft",
+      "DetectPattern": "^LightCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "pdfcraft",
+      "Name": "PdfCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/pdfcraft",
+      "DetectPattern": "^PdfCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "effectcraft",
+      "Name": "EffectCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/effectcraft",
+      "DetectPattern": "^EffectCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "anicraft",
+      "Name": "AniCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/anicraft",
+      "DetectPattern": "^AniCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "designcraft",
+      "Name": "DesignCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/designcraft",
+      "DetectPattern": "^DesignCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "figcraft",
+      "Name": "FigCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/figcraft",
+      "DetectPattern": "^FigCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "texturecraft",
+      "Name": "TextureCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/texturecraft",
+      "DetectPattern": "^TextureCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "materialcraft",
+      "Name": "MaterialCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/materialcraft",
+      "DetectPattern": "^MaterialCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "soundcraft",
+      "Name": "SoundCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/soundcraft",
+      "DetectPattern": "^SoundCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "wordcraft",
+      "Name": "WordCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/wordcraft",
+      "DetectPattern": "^WordCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "deckcraft",
+      "Name": "DeckCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/deckcraft",
+      "DetectPattern": "^DeckCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "cadcraft",
+      "Name": "CADCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/cadcraft",
+      "DetectPattern": "^CADCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "gridcraft",
+      "Name": "GridCraft",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/gridcraft",
+      "DetectPattern": "^GridCraft",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    },
+    {
+      "Id": "craft-anything",
+      "Name": "Craft Anything",
+      "Category": "ArtCraft",
+      "Winget": "",
+      "Choco": "",
+      "Website": "https://github.com/storytold/craft-anything",
+      "DetectPattern": "^Craft Anything",
+      "Tags": [
+        "artcraft",
+        "preview"
+      ],
+      "Verification": "manual",
+      "Notes": "Official source. Early development/alpha; automated package mapping not verified. Install manually via official release/launcher."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Custom",
+  "Provider": "Choco",
+  "Actions": [],
+  "Apps": []
+}

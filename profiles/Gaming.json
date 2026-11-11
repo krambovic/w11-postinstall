@@ -1,0 +1,12 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Gaming",
+  "Provider": "Choco",
+  "Actions": [
+    "explorer.extensions",
+    "gaming.mode",
+    "gaming.capture",
+    "gaming.dvr"
+  ],
+  "Apps": []
+}

@@ -1,0 +1,13 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Balanced",
+  "Provider": "Choco",
+  "Actions": [
+    "explorer.extensions",
+    "privacy.advertising",
+    "privacy.tailored",
+    "privacy.suggestions",
+    "privacy.tips"
+  ],
+  "Apps": []
+}

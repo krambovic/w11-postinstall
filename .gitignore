@@ -1,0 +1,6 @@
+state/
+*.log
+*.tmp
+*.zip
+artifacts/
+.serena/

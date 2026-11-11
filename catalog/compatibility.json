@@ -1,0 +1,49 @@
+{
+  "SchemaVersion": 1,
+  "Builds": [
+    {
+      "Release": "21H2",
+      "Build": 22000,
+      "Validation": "Unverified"
+    },
+    {
+      "Release": "22H2",
+      "Build": 22621,
+      "Validation": "Unverified"
+    },
+    {
+      "Release": "23H2",
+      "Build": 22631,
+      "Validation": "Unverified"
+    },
+    {
+      "Release": "24H2",
+      "Build": 26100,
+      "Validation": "Unverified"
+    },
+    {
+      "Release": "25H2",
+      "Build": 26200,
+      "Validation": "Unverified"
+    },
+    {
+      "Release": "26H1",
+      "Build": 28000,
+      "Validation": "Unverified"
+    },
+    {
+      "Release": "26H2",
+      "Build": 26300,
+      "Validation": "Unverified"
+    }
+  ],
+  "Architectures": [
+    "AMD64"
+  ],
+  "Editions": [
+    "Core",
+    "CoreSingleLanguage",
+    "Professional"
+  ],
+  "Notes": "No live machine/VM modifications have been tested. AllowUnverified is required for preview Apply."
+}

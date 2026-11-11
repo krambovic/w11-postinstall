@@ -1,0 +1,11 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Laptop",
+  "Provider": "Choco",
+  "Actions": [
+    "explorer.extensions",
+    "privacy.advertising",
+    "privacy.suggestions"
+  ],
+  "Apps": []
+}

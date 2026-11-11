@@ -1,0 +1,17 @@
+{
+  "SchemaVersion": 1,
+  "Name": "Minimal",
+  "Provider": "Choco",
+  "Actions": [
+    "explorer.extensions",
+    "privacy.advertising",
+    "privacy.tailored",
+    "privacy.suggestions",
+    "privacy.tips",
+    "debloat.clipchamp",
+    "debloat.solitaire",
+    "debloat.news",
+    "debloat.getstarted"
+  ],
+  "Apps": []
+}
